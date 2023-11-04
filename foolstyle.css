@@ -1,0 +1,26 @@
+.card{
+    border-radius: 5px;
+    border-width: 3px;
+    border-color: black;
+    border-style: groove;
+    width:max-content;
+    padding:2px;
+    display:inline-block
+
+};
+
+.scrbtn{
+font-size: smaller;
+};
+
+h1{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    color:darkolivegreen;
+    text-decoration: underline;
+    border-radius: 10px;
+    border-width: 5px;
+    background-color: antiquewhite;
+    border-color: black;
+
+};

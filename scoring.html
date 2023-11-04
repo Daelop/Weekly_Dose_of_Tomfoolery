@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Weekly Dose of Tomfoolery Scoreboard</title>
+    <script src="scoringScript.js"></script>
+    <link rel="stylesheet" href="foolstyle.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <h1>Weekly Dose of Tomfoolery!</h1>
+    <div id="p1Block" class="card">
+      <div id="p1fn">
+        <label for="player1">P1 Name</label>
+        <br />
+        <input type="text" id="player1" name="player1" placeholder="Player 1" />
+      </div>
+      <div class="bye">
+        <input type="color" id="p1Colour" />
+        <button type="button" onclick="changeColour('p1Colour','p1Block')">
+          Change Colour!
+        </button>
+      </div>
+      <p id="p1scr">Score: 0</p>
+      <!--<input type="file" id="p1img" name="p1img">-->
+
+      <button
+        type="button"
+        onclick="scoreChng(0,200)"
+        id="p1+200"
+        class="scrbtn"
+      >
+        +200
+      </button>
+      <button
+        type="button"
+        onclick="scoreChng(0,100)"
+        id="p1+100"
+        class="scrbtn"
+      >
+        +100
+      </button>
+      <button type="button" onclick="scoreChng(0,50)" id="p1+50" class="scrbtn">
+        +50
+      </button>
+      <button type="button" onclick="scoreChng(0,10)" id="p1+10" class="scrbtn">
+        +10
+      </button>
+      <button
+        type="button"
+        onclick="scoreChng(0,-10)"
+        id="p1-10"
+        class="scrbtn"
+      >
+        -10
+      </button>
+      <button
+        type="button"
+        onclick="scoreChng(0,-50)"
+        id="p1-50"
+        class="scrbtn"
+      >
+        -50
+      </button>
+      <button
+        type="button"
+        onclick="scoreChng(0,-100)"
+        id="p1-100"
+        class="scrbtn"
+      >
+        -100
+      </button>
+      <button type="button" onclick="scoreChng(0,-200)" id="p1-200">
+        -200
+      </button>
+    </div>
+    <div id="p2Block" class="card">
+      <div id="p2fn">
+        <label for="player2">P2 name</label>
+        <br />
+        <input
+          type="text"
+          id="player2"
+          name="player2"
+          class="player2"
+          placeholder="Player 2"
+        />
+      </div>
+      <div class="bye">
+        <input type="color" id="p2Colour" />
+        <button type="button" onclick="changeColour('p2Colour','p2Block')">
+          Change Colour!
+        </button>
+      </div>
+      <p id="p2scr">Score: 0</p>
+      <!--<input type="file" id="p2img" name="p2img">-->
+
+      <button
+        type="button"
+        onclick="scoreChng(1,200)"
+        id="p2+200"
+        class="scrbtn"
+      >
+        +200
+      </button>
+      <button
+        type="button"
+        onclick="scoreChng(1,100)"
+        id="p2+100"
+        class="scrbtn"
+      >
+        +100
+      </button>
+      <button type="button" onclick="scoreChng(1,50)" id="p2+50" class="scrbtn">
+        +50
+      </button>
+      <button type="button" onclick="scoreChng(1,10)" id="p2+10" class="scrbtn">
+        +10
+      </button>
+      <button
+        type="button"
+        onclick="scoreChng(1,-10)"
+        id="p2-10"
+        class="scrbtn"
+      >
+        -10
+      </button>
+      <button
+        type="button"
+        onclick="scoreChng(1,-50)"
+        id="p2-50"
+        class="scrbtn"
+      >
+        -50
+      </button>
+      <button
+        type="button"
+        onclick="scoreChng(1,-100)"
+        id="p2-100"
+        class="scrbtn"
+      >
+        -100
+      </button>
+      <button
+        type="button"
+        onclick="scoreChng(1,-200)"
+        id="p2-200"
+        class="scrbtn"
+      >
+        -200
+      </button>
+    </div>
+
+    <div id="p3Block" class="card">
+      <div id="p3fn">
+        <label for="player3">P3 Name</label>
+        <br />
+        <input type="text" id="player3" name="player3" placeholder="Player 3" />
+      </div>
+      <div class="bye">
+        <input type="color" id="p3Colour" />
+        <button type="button" onclick="changeColour('p3Colour','p3Block')">
+          Change Colour!
+        </button>
+      </div>
+      <p id="p3scr">Score: 0</p>
+      <!-- <input type="file" id="p3img" name="p3img"> -->
+
+      <button
+        type="button"
+        onclick="scoreChng(2,200)"
+        id="p3+200"
+        class="scrbtn"
+      >
+        +200
+      </button>
+      <button
+        type="button"
+        onclick="scoreChng(2,100)"
+        id="p3+100"
+        class="scrbtn"
+      >
+        +100
+      </button>
+      <button type="button" onclick="scoreChng(2,50)" id="p3+50" class="scrbtn">
+        +50
+      </button>
+      <button type="button" onclick="scoreChng(2,10)" id="p3+10" class="scrbtn">
+        +10
+      </button>
+      <button
+        type="button"
+        onclick="scoreChng(2,-10)"
+        id="p3-10"
+        class="scrbtn"
+      >
+        -10
+      </button>
+      <button
+        type="button"
+        onclick="scoreChng(2,-50)"
+        id="p3-50"
+        class="scrbtn"
+      >
+        -50
+      </button>
+      <button
+        type="button"
+        onclick="scoreChng(2,-100)"
+        id="p3-100"
+        class="scrbtn"
+      >
+        -100
+      </button>
+      <button
+        type="button"
+        onclick="scoreChng(2,-200)"
+        id="p3-200"
+        class="scrbtn"
+      >
+        -200
+      </button>
+    </div>
+
+    <div id="p4Block" class="card">
+      <div id="p4fn">
+        <label for="player4">P4 Name</label>
+        <br />
+        <input type="text" id="player4" name="player4" placeholder="Player 4" />
+      </div>
+      <div class="bye">
+        <input type="color" id="p4Colour" />
+        <button type="button" onclick="changeColour('p4Colour','p4Block')">
+          Change Colour!
+        </button>
+      </div>
+      <p id="p4scr">Score: 0</p>
+      <!-- <input type="file" id="p4img" name="p4img"> -->
+
+      <button
+        type="button"
+        onclick="scoreChng(3,200)"
+        id="p4+200"
+        class="scrbtn"
+      >
+        +200
+      </button>
+      <button
+        type="button"
+        onclick="scoreChng(3,100)"
+        id="p4+100"
+        class="scrbtn"
+      >
+        +100
+      </button>
+      <button type="button" onclick="scoreChng(3,50)" id="p4+50" class="scrbtn">
+        +50
+      </button>
+      <button type="button" onclick="scoreChng(3,10)" id="p4+10" class="scrbtn">
+        +10
+      </button>
+      <button
+        type="button"
+        onclick="scoreChng(3,-10)"
+        id="p4-10"
+        class="scrbtn"
+      >
+        -10
+      </button>
+      <button
+        type="button"
+        onclick="scoreChng(3,-50)"
+        id="p4-50"
+        class="scrbtn"
+      >
+        -50
+      </button>
+      <button
+        type="button"
+        onclick="scoreChng(3,-100)"
+        id="p4-100"
+        class="scrbtn"
+      >
+        -100
+      </button>
+      <button
+        type="button"
+        onclick="scoreChng(3,-200)"
+        id="p4-200"
+        class="scrbtn"
+      >
+        -200
+      </button>
+      <br />
+    </div>
+
+    <div id="p5Block" class="card">
+      <div id="p5fn">
+        <label for="player5">P5 Name</label>
+        <br />
+        <input type="text" id="player5" name="player5" placeholder="Player 5" />
+      </div>
+      <div class="bye">
+        <input type="color" id="p5Colour" />
+        <button type="button" onclick="changeColour('p5Colour','p5Block')">
+          Change Colour!
+        </button>
+      </div>
+      <p id="p5scr">Score: 0</p>
+      <!-- <input type="file" id="p5img" name="p5img"> -->
+      <button
+        type="button"
+        onclick="scoreChng(4,200)"
+        id="p5+200"
+        class="scrbtn"
+      >
+        +200
+      </button>
+      <button
+        type="button"
+        onclick="scoreChng(4,100)"
+        id="p5+100"
+        class="scrbtn"
+      >
+        +100
+      </button>
+      <button type="button" onclick="scoreChng(4,50)" id="p5+50" class="scrbtn">
+        +50
+      </button>
+      <button type="button" onclick="scoreChng(4,10)" id="p5+10" class="scrbtn">
+        +10
+      </button>
+      <button
+        type="button"
+        onclick="scoreChng(4,-10)"
+        id="p5-10"
+        class="scrbtn"
+      >
+        -10
+      </button>
+      <button
+        type="button"
+        onclick="scoreChng(4,-50)"
+        id="p5-50"
+        class="scrbtn"
+      >
+        -50
+      </button>
+      <button
+        type="button"
+        onclick="scoreChng(4,-100)"
+        id="p5-100"
+        class="scrbtn"
+      >
+        -100
+      </button>
+      <button
+        type="button"
+        onclick="scoreChng(4,-200)"
+        id="p5-200"
+        class="scrbtn"
+      >
+        -200
+      </button>
+    </div>
+
+    <div id="p6Block" class="card">
+      <div id="p6fn">
+        <label for="player6">P6 Name</label>
+        <br />
+        <input type="text" id="player6" name="player6" placeholder="Player 6" />
+      </div>
+      <div class="bye">
+        <input type="color" id="p6Colour" />
+        <button type="button" onclick="changeColour('p6Colour','p6Block')">
+          Change Colour!
+        </button>
+      </div>
+      <p id="p6scr">Score: 0</p>
+      <!-- <input type="file" id="p6img" name="p6img"> -->
+
+      <button
+        type="button"
+        onclick="scoreChng(4,200)"
+        id="p6+200"
+        class="scrbtn"
+      >
+        +200
+      </button>
+      <button
+        type="button"
+        onclick="scoreChng(4,100)"
+        id="p6+100"
+        class="scrbtn"
+      >
+        +100
+      </button>
+      <button type="button" onclick="scoreChng(4,50)" id="p6+50" class="scrbtn">
+        +50
+      </button>
+      <button type="button" onclick="scoreChng(4,10)" id="P6+10" class="scrbtn">
+        +10
+      </button>
+      <button
+        type="button"
+        onclick="scoreChng(4,-10)"
+        id="p6-10"
+        class="scrbtn"
+      >
+        -10
+      </button>
+      <button
+        type="button"
+        onclick="scoreChng(4,-50)"
+        id="p6-50"
+        class="scrbtn"
+      >
+        -50
+      </button>
+      <button
+        type="button"
+        onclick="scoreChng(4,-100)"
+        id="p6-100"
+        class="scrbtn"
+      >
+        -100
+      </button>
+      <button
+        type="button"
+        onclick="scoreChng(4,-200)"
+        id="p6-200"
+        class="scrbtn"
+      >
+        -200
+      </button>
+    </div>
+    <br />
+    <button type="button" onclick="confirmNames()" id="confirmNames">
+      Confirm Player Customization!
+    </button>
+
+  </body>
+</html>
